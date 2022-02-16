@@ -1,18 +1,14 @@
-# Deploy Data Pipeline in AWS using Serverless Framwork
-1. Upload data to S3
-2. S3 event trigger Lambda
-3. Lambda load data from S3 to DynamoDB
-
-# Serverless Project Initialization
-```powershell
-# Create a new Serverless Service/Project
-serverless create --template aws-python3 --path {project_folder}
-
-# Change into the newly created directory
-cd my-data-pipeline
-```
+# Deploy Data Pipeline in AWS using Serverless Framework
+1. Preparation (on MacOS as example)
+2. Serverless Framework Code
+3. Deploy change into AWS
 
 # Preparation (on MacOS as example)
+## S3
+```powershell
+Build a S3 bucket for deploy if needed 
+```
+
 ## Python
 
 ```powershell
@@ -20,14 +16,12 @@ cd my-data-pipeline
 # 2. cd to the directory where requirements.txt is located
 # 3. Optional: activate your virtualenv
 # 4. Run the following command to install required python packages
-pip3 install -r requirements.txt
+% pip3 install -r requirements.txt
 ```
 
 ## Serverless Initialization 
 
 ```powershell
-Install/Upgrade Serverless on MacOS as example
-
 # 1. Install or update Serverless to latest
 % curl -o- -L https://slss.io/install | bash
 % serverless upgrade
@@ -45,18 +39,23 @@ Install/Upgrade Serverless on MacOS as example
 # 6 Check serverless framework version
 % serverless -v
 ```
+ ## Serverless Project Initialization
+```powershell
+# Create a new Serverless Service/Project
+% serverless create --template aws-python3 --path {project_folder}
+```
 
 # Serverless Framework Code
 ### Open your project in VScode
 ```powershell
-open -a “Visual Studio Code” {project_folder}
+% open -a “Visual Studio Code” {project_folder}
 ```
 ### Modify .python file
 ```powershell
-# Rename python function
-mv handler.py data_pipeline.py
+# Rename python file
+% mv handler.py data_pipeline.py
 
-# Copy the code into python file and save it
+# Copy the code into your python file from data_pipeline.py and save it
 
 # Install boto3 if you do not have it
 sudo apt install python3-pip -y
@@ -95,7 +94,7 @@ TZ_LOCAL=Australia/Sydney
 # Copy the code into your yml file and save it
 ```
 
-Deploy change into AWS
+# Deploy change into AWS
 ```powershell
 % sls deploy
 ```
