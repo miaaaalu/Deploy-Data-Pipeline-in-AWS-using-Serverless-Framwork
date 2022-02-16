@@ -1,4 +1,5 @@
 # Deploy Data Pipeline in AWS using Serverless Framework
+
 1. Preparation (on MacOS as example)
 2. Serverless Framework Code
 3. Deploy change into AWS
