@@ -7,7 +7,7 @@ import os
 from pytz import timezone 
 
 s3 = boto3.resource('s3')
-local_file = '/tmp/your_c.csv'
+local_file = '/tmp/your_csv.csv'
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table(os.environ['DYNAMO_TABLE'])
 tz_sydney = timezone(os.environ['TZ_LOCAL'])
