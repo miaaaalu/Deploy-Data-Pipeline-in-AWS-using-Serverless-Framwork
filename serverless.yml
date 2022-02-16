@@ -30,7 +30,7 @@ provider:
   memorySize: 256
   timeout: 300
   deploymentBucket:
-    name: serverless-deploy-mia
+    name: your-deploy-bucket
     maxPreviousDeploymentArtifacts: 3
   stage: dev
   region: ap-southeast-2
@@ -43,7 +43,7 @@ provider:
         - s3:HeadObject
         - s3:GetObject
       Resource:
-        - arn:aws:s3:::jiangrren09-mia-lu-dynamodb-demo/*
+        - arn:aws:s3:::s3-to-dynamodb-bucket/*
     - Effect: Allow
       Action: 
         - dynamodb:*
@@ -74,7 +74,7 @@ functions:
     description: "jiang ren data pipeline demo"
     events:
       - s3:
-          bucket: jiangrren09-mia-lu-dynamodb-demo
+          bucket: s3-to-dynamodb-bucket
           event: s3:ObjectCreated:*
           rules:
             - prefix: csv/
