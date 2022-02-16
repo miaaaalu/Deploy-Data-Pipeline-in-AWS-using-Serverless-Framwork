@@ -1,5 +1,7 @@
 # Deploy Data Pipeline in AWS using Serverless Framework
 
+![alt text](https://github.com/miaaaalu/Deploy-Data-Pipeline-in-AWS-using-Serverless-Framwork/blob/master/Deploy%20Data%20Pipeline.jpg?raw=true)
+
 1. Preparation (on MacOS as example)
 2. Serverless Framework Code
 3. Deploy change into AWS
