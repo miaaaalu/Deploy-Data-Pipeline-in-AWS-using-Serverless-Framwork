@@ -71,7 +71,7 @@ functions:
   dataPipeline:
     handler: data_pipeline.run
     name: my_first_data_pipeline
-    description: "jiang ren data pipeline demo"
+    description: "data pipeline demo"
     events:
       - s3:
           bucket: s3-to-dynamodb-bucket
@@ -82,7 +82,7 @@ functions:
 
 # you can add CloudFormation resource templates here
 resources:
-  Description: Jang Ren data pipeline services defination
+  Description: data pipeline services defination
   Resources:
     pipelineDynamoDBTable:
       Type: AWS::DynamoDB::Table
