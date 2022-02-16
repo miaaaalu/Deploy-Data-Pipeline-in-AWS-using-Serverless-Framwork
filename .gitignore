@@ -3,3 +3,4 @@ __cache__
 .serverless
 node_modules
 event/
+WorldCup.csv
